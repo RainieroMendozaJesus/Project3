@@ -52,6 +52,16 @@ import {
   trashSharp,
   warningOutline,
   warningSharp,
+  homeOutline,
+  homeSharp,
+  calculatorOutline,
+  calculatorSharp,
+  textOutline,
+  textSharp,
+  gridOutline,
+  gridSharp,
+  personOutline,
+  personSharp,
 } from 'ionicons/icons';
 
 const selectedIndex = ref(0);
@@ -59,32 +69,32 @@ const appPages = [
   {
     title: 'Página Inicial',
     url: '/pagina-inicio',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp,
+    iosIcon: homeOutline,
+    mdIcon: homeSharp,
   },
   {
     title: 'Sumadora',
     url: '/sumadora',
-    iosIcon: paperPlaneOutline,
-    mdIcon: paperPlaneSharp,
+    iosIcon: calculatorOutline,
+    mdIcon: calculatorSharp,
   },
   {
     title: 'Traductor de Números a Letras',
     url: '/traductor',
-    iosIcon: heartOutline,
-    mdIcon: heartSharp,
+    iosIcon: textOutline,
+    mdIcon: textSharp,
   },
   {
     title: 'Tabla de Multiplicar',
     url: '/tablas',
-    iosIcon: archiveOutline,
-    mdIcon: archiveSharp,
+    iosIcon: gridOutline,
+    mdIcon: gridSharp,
   },
   {
     title: 'Experiencia Personal',
     url: '/experiencia',
-    iosIcon: trashOutline,
-    mdIcon: trashSharp,
+    iosIcon: personOutline,
+    mdIcon: personSharp,
   },
 ];
 
