@@ -85,7 +85,7 @@ import { ref } from 'vue'
 
 #resultado {
   display: grid;
-  place-items: center; /* Centra todo el contenido */
+  place-items: center; 
   height: 5vh;
 }
 
