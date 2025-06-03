@@ -17,25 +17,40 @@
       </ion-header>
 
       <div id="container">
-        <strong class="capitalize">Página Inicial</strong>
-        <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+        <strong class="capitalize">Autor de la App</strong>
+        <p>Rainiero Mendoza de Jesus (2022-1079)</p>
       </div>
+
+
+      <ion-img 
+        src="public/assets/rai.jpg" 
+        alt="Rainiero Mendoza De Jesus"
+        id="foto-rai"></ion-img>
+
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang="ts">
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+  import {IonImg , IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+  import { defineComponent } from 'vue';
 </script>
 
 <style scoped>
 #container {
-  text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
+  padding-top: 50px;
+  padding-left: 15px;
+  
+  
   transform: translateY(-50%);
+}
+
+#foto-rai{
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 #container strong {
