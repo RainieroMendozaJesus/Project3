@@ -18,24 +18,54 @@
 
       <div id="container">
         <strong class="capitalize">Tablas de Multiplicar</strong>
-        <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
       </div>
+
+      <ion-list>
+          <ion-item>
+            <ion-input 
+              v-model="numero" 
+              type="number"
+              label="Numero" 
+              label-placement="floating" 
+              placeholder="Escriba el numero">
+            </ion-input>
+          </ion-item>
+      </ion-list>
+
+      <ion-button expand="block" @click="mostrarTabla" >Mostrar</ion-button>
+
+      <ion-list v-if="tablaVisible">
+        <ion-item v-for="(num, index) in numeros" :key="index">
+          {{ numero }} x {{ num }} = {{ numero * num }}
+        </ion-item>
+      </ion-list>
+
+
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang="ts">
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+  import { IonInput ,IonList, IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+  import { ref } from 'vue'
+
+  const numero = ref<number>(8);
+
+  let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+
+  let tablaVisible = ref<boolean>(false);
+
+  const mostrarTabla = () => {
+    tablaVisible.value = !tablaVisible.value;
+  };
 </script>
 
 <style scoped>
 #container {
-  text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  padding-top: 50px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  
 }
 
 #container strong {

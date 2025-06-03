@@ -38,7 +38,7 @@
 
 <style scoped>
 #container {
-  padding-top: 50px;
+  padding-top: 100px;
   padding-left: 15px;
   
   
