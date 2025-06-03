@@ -18,8 +18,17 @@
 
       <div id="container">
         <strong class="capitalize">Experiencia Personal</strong>
-        <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
       </div>
+
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/5MuIMqhT8DM"
+          width="640"
+          height="360"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+    </div>
     </ion-content>
   </ion-page>
 </template>
@@ -30,11 +39,8 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, Io
 
 <style scoped>
 #container {
-  text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
+  padding-top: 50px;
+  padding-left: 15px;
   transform: translateY(-50%);
 }
 
@@ -53,4 +59,20 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, Io
 #container a {
   text-decoration: none;
 }
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 </style>
