@@ -17,40 +17,76 @@
       </ion-header>
 
       <div id="container">
-        <strong class="capitalize">Sumadora</strong>
-        <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+        
       </div>
+      
+      <div id="resultado">
+        <h3>
+          Resultado: {{ resultado }}
+        </h3>
+      </div>
+
+      <ion-list>
+          <ion-item>
+            <ion-input 
+              v-model="numero1" 
+              type="number"
+              label="Numero" 
+              label-placement="floating" 
+              placeholder="Escriba el numero">
+            </ion-input>
+          </ion-item>
+      </ion-list>
+
+      <ion-list>
+          <ion-item>
+            <ion-input 
+              v-model="numero2" 
+              type="number"
+              label="Numero" 
+              label-placement="floating" 
+              placeholder="Escriba el numero">
+            </ion-input>
+          </ion-item>
+      </ion-list>
+      
+      <ion-button expand="block" @click="mostrarSuma" >Sumar</ion-button>
+      
+      
+      
+
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang="ts">
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import {IonItem, IonButtons, IonInput, IonList, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { ref } from 'vue'
+  const numero1 = ref<number>();
+  const numero2 = ref<number>();
+
+  const resultado = ref<number>();
+
+  const mostrarSuma = () => {
+      const num1 = Number(numero1.value) || 0;
+      const num2 = Number(numero2.value) || 0;
+      resultado.value = num1 + num2;
+  };
+
 </script>
 
 <style scoped>
 #container {
-  text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  padding-top: 50px;
+  padding-left: 15px;
+
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+
+#resultado {
+  display: grid;
+  place-items: center; /* Centra todo el contenido */
+  height: 5vh;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  color: #8c8c8c;
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
 </style>

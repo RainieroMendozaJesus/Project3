@@ -46,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-  import { IonInput ,IonList, IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+  import { IonItem, IonInput ,IonList, IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
   import { ref } from 'vue'
 
   const numero = ref<number>(8);
@@ -65,7 +65,6 @@
   padding-top: 50px;
   padding-left: 15px;
   padding-bottom: 15px;
-  
 }
 
 #container strong {
