@@ -23,7 +23,7 @@
 
 
       <ion-img 
-        src="public/assets/rai.jpg" 
+        :src="raiImg" 
         alt="Rainiero Mendoza De Jesus"
         id="foto-rai"></ion-img>
 
@@ -34,6 +34,7 @@
 <script setup lang="ts">
   import {IonImg , IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
   import { defineComponent } from 'vue';
+  import raiImg from '@/assets/rai.jpg';
 </script>
 
 <style scoped>
